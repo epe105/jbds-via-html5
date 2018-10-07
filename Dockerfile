@@ -88,7 +88,7 @@ RUN    mkdir -p ${HOME} \
 ADD resources/FuseWorkshop.jar ${HOME}/
 
 # Extract FuseWorkshop files
-RUN    & cd ${HOME} \
+RUN    cd ${HOME} \
     && jar -xvf FuseWorkshop.jar FuseWorkshop
 
 EXPOSE 5901
