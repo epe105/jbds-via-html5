@@ -4,7 +4,7 @@
 
 FROM fedora:26
 
-MAINTAINER Rich Lucente <rlucente@redhat.com>
+MAINTAINER Manny Evangelista <man@redhat.com>
 
 LABEL vendor="Red Hat"
 LABEL version="0.2"
@@ -83,6 +83,13 @@ RUN    mkdir -p ${HOME} \
     && chmod a+rwX ${HOME} \
     && chmod a+rx /usr/local/bin/start.sh \
     && chmod a+r /usr/local/share/passwd.template
+
+# Add FuseWorkshop lab files to Home Directory
+ADD resources/FuseWorkshop.jar ${HOME}/
+
+# Extract FuseWorkshop files
+RUN    & cd ${HOME} \
+    && jar -xvf Fuseworkshop.jar FuseWorkshop
 
 EXPOSE 5901
 
