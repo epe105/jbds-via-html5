@@ -89,7 +89,7 @@ ADD resources/FuseWorkshop.jar ${HOME}/
 
 # Extract FuseWorkshop files
 RUN    & cd ${HOME} \
-    && jar -xvf Fuseworkshop.jar FuseWorkshop
+    && jar -xvf FuseWorkshop.jar FuseWorkshop
 
 EXPOSE 5901
 
