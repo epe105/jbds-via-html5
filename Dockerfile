@@ -90,7 +90,8 @@ ADD resources/FuseWorkshop.jar ${HOME}/
 # Extract FuseWorkshop files
 RUN    cd ${HOME} \
     && jar -xvf FuseWorkshop.jar FuseWorkshop \
-    && chmod a+rwX FuseWorkshop
+    && chmod a+rwX FuseWorkshop \
+    && chown -R jbdsuser:root FuseWorkshop
 
 EXPOSE 5901
 
