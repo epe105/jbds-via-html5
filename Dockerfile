@@ -101,4 +101,4 @@ CMD /usr/local/bin/start.sh
 RUN    cd ${HOME} \
     && jar -xvf FuseWorkshop.jar FuseWorkshop \
     && chmod a+rwX FuseWorkshop \
-    && chown -R jbdsuser:root FuseWorkshop
+    && chown -R jbdsuser FuseWorkshop
